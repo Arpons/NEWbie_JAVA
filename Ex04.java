@@ -2,24 +2,24 @@
 public class Ex04 {
 
 	public static void main(String[] args) {
-		// ½Ç¼ö
-		float b = 3.14f;
-		float c = (float)3.14;
+		int[] numbers = { 1, 1, 2, 2, 1, 1, 1, 4, 4, 4, 5, 5, 5, 3, 3, 3, 2, 2, 1, 1, 4, 4 };
+		int[] grades = { 1, 2, 3, 4, 5 };
+		int[] count = new int[5];
+		//intí˜• ë°°ì—´ ìƒì„±ì‹œ ì „ë¶€ 0ìœ¼ë¡œ ì´ˆê¸°í™”
 		
-		// ³í¸®
-		boolean isRunning = true;
-		isRunning = false;
-		
-		// ¹®ÀÚÇü
-		char ch = 'A';
-		
-		// ¹®ÀÚ¿­
-		String str = "¾È³çÇÏ¼¼¿ä";
-		
-		//type-casting
-		int num1 = (int)3.14;
-		
-		System.out.println(num1);
+		// ê° ìˆ«ì ë³„ ë¹ˆë„ìˆ˜
+		for (int index1 = 0; index1 < numbers.length; index1++) {
+			for (int index2 = 0; index2 < grades.length; index2++) {
+				if (numbers[index1] == grades[index2]) {
+					count[index2] += 1;
+					
+				}
+			}
+
+		}
+		for (int i = 0; i < 5; i++) {
+			System.out.println(grades[i] + "ì˜ ë“±ì¥ íšŸìˆ˜ " + count[i]);
+		}
 
 	}
 
