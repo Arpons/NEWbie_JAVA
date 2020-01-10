@@ -17,11 +17,13 @@ public class Main {
 		int max = 10;
 		
 		
-		PlusGame cd = new PlusGame(word, goodMessage, life, max);
-		Controller con1 = new Controller(cd);
-		con1.start();
-		
-	
+		/*
+		 * PlusGame cd = new PlusGame(word, goodMessage, life, max); Controller con1 =
+		 * new Controller(cd); con1.start();
+		 */
+		// Minus Game cd 생성!
+		MinusGame cd1 = new MinusGame(new String[] {"한번틀렸다." , "두번틀렸다"}, "잘했다", 2, 99);
+		new Controller(cd1).start();	
 
 
 		

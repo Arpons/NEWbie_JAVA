@@ -2,13 +2,14 @@ package Game;
 
 import java.util.Random;
 
-public class PlusGame extends OperCD {
+public class MulGame extends OperCD {
 
-	public PlusGame(String[] word, String goodMessage, int life, int max) {
+	public MulGame(String[] word, String goodMessage, int life, int max) {
 		super(word, goodMessage, life, max);
 		
 	}
 
+	@Override
 	public void makeRandom() {
 		Random random = new Random();
 		numFirst = random.nextInt(max) + 1;
@@ -16,13 +17,14 @@ public class PlusGame extends OperCD {
 
 	}
 
+	@Override
 	public String getQue() {
-		return numFirst + " + " + numSecond + " = ";
+		return numFirst + "*" + numSecond + " = ";
 	}
 
+	@Override
 	public boolean isOK(int answer) {
-		return answer == numFirst + numSecond;
+		return answer == numFirst * numSecond;
 	}
-	
 
 }

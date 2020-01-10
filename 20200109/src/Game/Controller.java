@@ -5,11 +5,13 @@ import java.util.Scanner;
 
 public class Controller {
 	
-	private PlusGame cd;
+	private OperCD cd;
 	
-	public Controller(PlusGame cd) {
+	
+	public Controller(OperCD cd) {
 		this.cd = cd;
 	}
+	
 	
 	public void start() {
 		
@@ -17,9 +19,7 @@ public class Controller {
 		
 		
 		int answer;
-		int numFirst;
-		int numSecond;
-		int count = 0;
+	
 		
 		for (int i = 0; i < cd.getLife();) {
 			cd.makeRandom();
